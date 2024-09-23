@@ -17,7 +17,7 @@ function start() {
     else {
         startTime = Date.now() + elapsedTime;
         update();
-        timer = setInterval(update, 1000);
+        timer = setInterval(update, 900);
         isRunning = true;
         startBtn.textContent = `Stop`;
     }
@@ -45,9 +45,10 @@ function update() {
 
     if (elapsedTime <=0 ) {
         clearInterval(timer);
-        display.textContent = "01:00";
+        display.textContent = "50:00";
         startBtn.textContent = `Start`;
         isRunning = false;
+        reset();
         return;
     }
 

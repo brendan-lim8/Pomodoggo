@@ -16,6 +16,7 @@ header{
     position: relative;
     color: grey;
     margin-top: 20px;
+    margin-left: 20px;
 }
 #container{
     display: flex;
@@ -56,11 +57,13 @@ header{
 }
 
 #doggo{
-    position: absolute;
-    height: 500px;
+    width: 200px;
     max-width: 100%;
     object-fit: contain;
-    left: 500px;
+}
+#fill{
+  width: 200px;
+  border: 2px solid;
 }
 footer{
     text-align: center;
