@@ -1,4 +1,5 @@
-const display = document.getElementById("display");
+const display = document.getElementById("timer");
+const startBtn = document.getElementById("startBtn")
 let timer = null;
 let countdown = 50*1000*60;
 let startTime = Date.now() + countdown;
@@ -15,6 +16,7 @@ function start() {
     }
     else {
         startTime = Date.now() + elapsedTime;
+        update();
         timer = setInterval(update, 1000);
         isRunning = true;
         startBtn.textContent = `Stop`;
@@ -32,7 +34,7 @@ function reset() {
     hours = Math.floor(elapsedTime / (1000 * 60 * 60));
     minutes = Math.floor(elapsedTime / (1000 * 60) % 60);
     seconds = Math.floor(elapsedTime / 1000 % 60);
-    display.textContent = `${minutes}:${seconds}0`;
+    display.textContent = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
     startBtn.textContent = `Start`;
 }
 
@@ -43,7 +45,7 @@ function update() {
 
     if (elapsedTime <=0 ) {
         clearInterval(timer);
-        display.textContent = "00:00";
+        display.textContent = "01:00";
         startBtn.textContent = `Start`;
         isRunning = false;
         return;
@@ -53,5 +55,5 @@ function update() {
     let minutes = Math.floor(elapsedTime / (1000 * 60) % 60);
     let seconds = Math.floor(elapsedTime / 1000 % 60);
 
-    display.textContent = `${minutes}:${seconds}`;
+    display.textContent = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
 }
