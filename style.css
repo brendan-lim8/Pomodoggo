@@ -41,6 +41,36 @@ header{
     border: 1px;
     color: grey;   
 }
+#pomodoroBtn{
+    cursor: pointer;
+    background-color: transparent;
+    border-color: grey;
+    border-radius: 9px;
+    font-family: Poppins;
+    color: grey;
+    font-weight: 900;
+    padding: 2px;
+}
+#longBreakBtn{
+    cursor: pointer;
+    background-color: transparent;
+    border-color: grey;
+    border-radius: 9px;
+    font-family: Poppins;
+    color: grey;
+    font-weight: 900;
+    padding: 2px;
+}
+#shortBreakBtn{
+    cursor: pointer;
+    background-color: transparent;
+    border-color: grey;
+    border-radius: 9px;
+    font-family: Poppins;
+    color: grey;
+    font-weight: 900;
+    padding: 2px;
+}
 #controls{
     display: flex;
     justify-content: center;
@@ -52,10 +82,8 @@ header{
     font-size: 20px;
     cursor: pointer;
     background-color: transparent;
-    border: none;   
-    
+    border: none;    
 }
-
 #doggo{
     width: 200px;
     max-width: 100%;

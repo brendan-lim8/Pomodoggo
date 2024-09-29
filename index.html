@@ -17,6 +17,11 @@
         <div id="container">
             <img id="doggo" src="blackshibatransparent.png" height = 500px; margin-left = auto>
             <div id="timer-container">
+                <div id="selectTime-container">
+                    <button id="pomodoroBtn" onclick="setTime(50)">Pomodoro</button>
+                    <button id ="longBreakBtn" onclick="setTime(60)">Long Break</button>
+                    <button id="shortBreakBtn" onclick="setTime(10)">Short Break</button>
+                </div>
                 <div id="timer">
                  50:00  
                 </div>
@@ -28,7 +33,7 @@
             </div>
             <div id="fill"> </div> 
         </div>
-        <footer>V1.0</footer>
+        <footer>V1.1</footer>
         <script src="index.js"></script>
     </body>
 </html>
